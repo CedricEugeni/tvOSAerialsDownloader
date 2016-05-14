@@ -1,0 +1,11 @@
+{
+  "name": "tvOSAerialsDownloader",
+  "private": true,
+  "version": "1.0.0",
+  "description": "a tvOS Aerials screensaver downloader written in node.js",
+  "repository": "",
+  "license": "",
+  "dependencies": {
+    "bluebird": "^3.3.5"
+  }
+}
