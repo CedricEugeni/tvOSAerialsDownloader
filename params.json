@@ -1,0 +1,6 @@
+{
+  "name": "Tvosaerialsdownloader",
+  "tagline": "A tvOS Aerials screensaver downloader written in node.js",
+  "body": "# tvOSAerialsDownloader\r\na tvOS Aerials screensaver downloader written in node.js\r\n\r\nTo use it, open a Terminal in the folder and execute the following commands :\r\n```\r\nnpm install\r\nnode app.js\r\n```\r\n\r\n## Bug reports & Contributing\r\n\r\nFeel free to report any issue or contirbuting by adding pull request.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
