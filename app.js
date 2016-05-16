@@ -1,33 +1,5 @@
 var http = require('http');
-var promise = require('bluebird');
-var url = require('url');
-var fs = require('fs');
-var assert = require('assert');
-
-function download(option) {
-    assert(option);
-    if (typeof option == 'string') {
-        option = url.parse(option);
-    }
-
-    return new promise(function(resolve, reject) {
-        var req = http.request(option, function(res) {
-            if (res.statusCode == 200) {
-                resolve(res);
-            } else {
-                if ((res.statusCode === 301 || res.statusCode === 302) && res.headers.location) {
-                    resolve(download(res.headers.location));
-                } else {
-                    reject(res.statusCode);
-                }
-            }
-        })
-        .on('error', function(e) {
-            reject(e);
-        })
-        .end();
-    });
-}
+var httpreq = require('httpreq');
 
 function downloadVideos(json) {
     var i = 0;
@@ -39,13 +11,16 @@ function downloadVideos(json) {
         while (j < assets.length) {
             var asset = assets[j];
 
-            download(asset.url).then(function(stream) {
-                try {
-                    var writeStream = fs.createWriteStream(asset.id + ".mov");
-                    stream.pipe(writeStream);
-                } catch(e) {
-                    console.error(e);
+            httpreq.download(asset.url, asset.id + ".mov", function (err, progress) {
+                if (err) {
+                    return console.log(err);
                 }
+                console.log(progress);
+            }, function (err, res) {
+                if (err) {
+                    return console.log(err);
+                }
+                console.log(res);
             });
 
             j++;
