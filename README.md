@@ -13,8 +13,8 @@ Feel free to report any issue or contirbuting by adding pull request.
 
 ## License
 
-`tvOSAerialsDownloader` is distributed under the terms and conditions of the [MIT license]().
+`tvOSAerialsDownloader` is distributed under the terms and conditions of the [MIT license](https://github.com/CedricEugeni/tvOSAerialsDownloader/blob/master/LICENSE).
 
 ## Credits
 
-`tvOSAerialsDownloader` is brought to you by [Cédric Eugeni](https://github.com/CedricEugeni), [contributors to the project]().
+`tvOSAerialsDownloader` is brought to you by [Cédric Eugeni](https://github.com/CedricEugeni) and [contributors to the project](https://github.com/CedricEugeni/tvOSAerialsDownloader/graphs/contributors).
